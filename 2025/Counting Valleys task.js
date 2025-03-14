@@ -71,3 +71,19 @@ var i = 0;
     }
     
     console.log(valleys);
+
+
+    //******************************third solution 
+    
+
+    
+    let counter = 0;
+    let position = 0;
+    for (let i =0;i<steps;i++){
+        const wasInVally =counter<0 
+        paths[i] === 'U'?counter++:counter--;
+        if (counter === 0 && wasInVally) {
+            position++;
+        }
+    }
+    return position;
